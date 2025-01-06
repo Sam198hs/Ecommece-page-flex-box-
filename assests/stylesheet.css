@@ -1,0 +1,107 @@
+html, body {            /* Apply Flexbox to body to push the footer to the bottom */
+    height: 100%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    flex-grow: 1;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover, a:focus, a:active {
+    text-decoration: underline;
+}
+
+.header {
+    background-color: rgb(51, 51, 51); 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-block: 5px;   
+}
+
+.logo {  
+    font-size: 1rem;
+} 
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    padding: 15px;
+}
+
+/* main { 
+    flex: 1;  /* Allow main content to take available space 
+/* } */
+
+.main-content {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 10px
+}
+
+.product-card{
+    margin: 10px;
+    background-color: antiquewhite;
+    width: 320px;
+    height: 320px;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+.product-card img {
+    width: 100%;          /* Make the image fill the width of the card */
+    height: 80%;         
+    object-fit: cover;    /* Ensure the image covers the space without distorting */
+}
+
+.product-card:hover {
+    background-color: rgb(245, 243, 240);
+}
+
+.footer {
+    height: 50px;
+    background-color: rgb(51, 51, 51); 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Added padding for spacing */
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+}
+
+@media (max-width: 810px) {       
+        .header {
+            flex-direction: column;
+        }
+    
+        .logo {  
+            font-size: .9rem;
+        } 
+           
+        .main-content {
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .product-card{
+            width: 100%;
+            height: auto;
+        }        
+}
+
